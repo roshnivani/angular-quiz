@@ -1,0 +1,28 @@
+<p>show-quiz works!</p>
+
+   
+<div style="font-size: medium;width:50% ;margin-left: 15px;" >
+    <table *ngIf="users" class="table table-bordered table-hover">
+        <thead>
+            <tr style="font-weight: bold;">
+              <td>Question</td>
+              <td>Option-1</td>
+              <td>Option-2</td>
+              <td>Option-3</td>
+              <td>Option-4</td>
+              <td>Correct</td>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr *ngFor="let user of users">
+                <td>{{user.Questions}}</td>
+                <td>{{user.opt1}}</td>
+                <td>{{user.opt2}}</td>
+                <td>{{user.opt3}}</td>
+                <td>{{user.opt4}}</td>
+                <td>{{user.correct}}</td>
+               <!-- <td><button type="button" (click)="deleteQuiz(user.quiz_id)" class="btn btn-outline-primary">Delete</button></td> -->
+            </tr>
+        </tbody>
+    </table>

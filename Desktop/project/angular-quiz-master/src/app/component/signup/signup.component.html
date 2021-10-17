@@ -1,0 +1,22 @@
+<body >
+    <div class="box" ></div>
+
+<div class="container box-overlay shadow-lg p-3 mb-5 bg-white rounded" align="center" style="font-size: large;">
+    <form>
+        <fieldset  class="form-group border p-3">
+            <h2 style="text-align: center;margin-top: 10px;">Sign Up</h2>  
+        <div class="form-row">
+            <input type="radio" name="role_id" [(ngModel)]="user1.role.role_id" value="2">Admin
+            <input type="radio" name="role_id" [(ngModel)]="user1.role.role_id" value="3">User
+    <div class="col-5">
+    Name:<input type="text" name="name"  [(ngModel)]="user1.name" class="form-control"/></div>
+    <div class="col-5">
+        Email:<input type="text" name="email" [(ngModel)]="user1.email" class="form-control"/></div>
+    <div class="col-5">
+    Password:<input type="password" name="password"  [(ngModel)]="user1.password" class="form-control"/><br/></div></div>
+    <input type="submit" value="submit" (click)="saveUser()"/>
+    <a routerLink="/login">Login</a>
+    </fieldset>
+    </form> 
+</div>
+</body>

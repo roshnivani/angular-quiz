@@ -1,0 +1,41 @@
+
+   
+        <div style="font-size: medium;width:50% ;margin-left: 15px;" >
+            <table *ngIf="users" class="table table-bordered table-hover">
+                <thead>
+                    <tr style="font-weight: bold;">
+                        <td>quizId</td>
+                        <td>quizName</td>
+                        <td>no_que</td>
+                        <td>deuctionOf</td>
+                        <td>code</td>
+                        <td>startDate</td>
+                        <td>endDate</td>
+                        <td>isActive</td>
+                        <td>negative</td>
+                        <td>isPublic</td>
+                        <td>ToatalMarks</td>
+                        <td>pointPerQue</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr *ngFor="let user of users">
+                        <td>{{user.quiz_id}}</td>
+                        <td>{{user.quizName}}</td>
+                        <td>{{user.no_que}}</td>
+                        <td>{{user.deuctionOf}}</td>
+                        <td>{{user.code}}</td>
+                        <td>{{user.startDate}}</td>
+                        <td>{{user.endDate}}</td>
+                        <td>{{user.active}}</td>
+                        <td>{{user.negative}}</td>
+                        <td>{{user.public}}</td>
+                        <td>{{user.marks}}</td>
+                        <td>{{user.pointPerQue}}</td>
+                        <td><button type="button" (click)="deleteQuiz(user.quiz_id)" class="btn btn-outline-primary">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        

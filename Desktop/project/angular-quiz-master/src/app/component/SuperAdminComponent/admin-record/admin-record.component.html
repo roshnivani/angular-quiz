@@ -1,0 +1,31 @@
+ 
+  
+ <input class="form-control" type="search" name="name" [(ngModel)]="name" (ngModelChange)="search()" placeholder="enter item to search"/>
+       <div class="container" style="font-size: large;">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>  
+                    <th> UserId </th>  
+                    <th> Name </th>  
+                    <th> Email </th> 
+                    <th>Actions</th> 
+                </tr>  
+            </thead>  
+            <tbody> 
+                
+    
+                <tr *ngFor = "let user of data">  
+                    <td> {{user.userId}} </td>  
+                    <td> {{user.name}}</td>  
+                    <td> {{user.email}} </td>
+                    <td>
+                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons" style="color:coral">&#xE417;</i></a>
+                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons" style="color:greenyellow">&#xE254;</i></a>
+                        <button  class="delete" title="Delete" data-toggle="tooltip" (click)="delete(user.userId)"><i class="material-icons" style="color: rgb(245, 33, 33);">&#xE872;</i></button>
+                    </td>  
+                </tr>  
+            </tbody>  
+        </table>  
+    </div>
+    
+  

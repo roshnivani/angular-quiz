@@ -1,0 +1,16 @@
+<body>
+    <div class="box" ></div>
+    <div class="container box-overlay shadow-lg p-3 mb-5 bg-white rounded" align="center">
+        <form>
+            <fieldset  class="form-group border p-3">
+               <h2>Login</h2>
+            <div class="form-row">
+                <div class="col-5">
+        Email:<input type="text" name="email" [(ngModel)]="email" class="form-control"/></div>
+        <div class="col-5">
+        Password:<input type="password" name="password"  [(ngModel)]="password" class="form-control"/><br/></div></div>
+        <button type="button" (click)="authenticate()" class="btn btn-primary">Login</button>
+        </fieldset>
+        </form>
+        </div>
+    </body>

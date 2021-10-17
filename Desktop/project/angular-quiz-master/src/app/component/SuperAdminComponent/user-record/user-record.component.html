@@ -1,0 +1,16 @@
+<div class="container">
+    <ag-grid-angular
+        style="width: 900px; height: 500px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef"
+        
+        (rowEditingStopped)="onRowEditingStopped($event)"
+        (rowEditingStarted)="onRowEditingStarted($event)"
+        (cellClicked)="onCellClicked($event)"
+        editType="fullRow"
+        [suppressClickEdit]="true"
+    >
+    </ag-grid-angular>
+    </div>

@@ -1,0 +1,101 @@
+<body class="container" style="justify-content: center;align-items: center;">
+
+    <div class="center" style="font-size: medium;width:50% ;">
+
+        <form>
+
+            <h2 style="text-align: center;">Quiz</h2>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">Quiz Name</label>
+                <div class="col-sm-8">
+                    <input type="text" name="no_que" class="form-control" [(ngModel)]="quiz.quizName" /><br />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">No. of Question</label>
+                <div class="col-sm-8">
+                    <input type="text" name="no_que" class="form-control" [(ngModel)]="quiz.no_que" /><br />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">Point per Question</label>
+                <div class="col-sm-8">
+                    <input type="text" name="pointPerQue" class="form-control" [(ngModel)]="quiz.pointPerQue" /><br />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">IsNegative</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="negative" [(ngModel)]="quiz.negative"
+                            [value]="true">true
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="negative" [(ngModel)]="quiz.negative"
+                            [value]="false">false
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">Deduction of Marks</label>
+                <div class="col-sm-8">
+                    <input type="text" name="deuctionOf" class="form-control" [(ngModel)]="quiz.deuctionOf" /><br />
+                </div>
+            </div>
+           
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">Total Marks</label>
+                <div class="col-sm-8">
+                    <input type="text" name="marks" class="form-control" [(ngModel)]="quiz.marks" /><br />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">startDate</label>
+                <div class="col-sm-8">
+                    <input type="date" name="startDate" class="form-control" [(ngModel)]="quiz.startDate" /><br />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">endDate</label>
+                <div class="col-sm-8">
+                    <input type="date" name="endDate" class="form-control" [(ngModel)]="quiz.endDate" /><br />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">IsActive</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="isActive" [(ngModel)]="quiz.active"
+                            [value]="true">true
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="isActive" [(ngModel)]="quiz.active"
+                            [value]="false">false
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">IsPublic</label>
+                <div class="col-sm-8">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="isPublic" [(ngModel)]="quiz.public"
+                            [value]="true">true
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="isPublic" [(ngModel)]="quiz.public"
+                            [value]="false">false
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-4 col-form-label">Code</label>
+                <div class="col-sm-8">
+                    <input type="text" name="no_que" class="form-control" [(ngModel)]="quiz.code" /><br />
+                </div>
+            </div>
+            <button type="button" (click)="saveQuiz()" class="btn btn-primary btn-lg">submit</button>
+        </form>
+    </div>
+
+</body>

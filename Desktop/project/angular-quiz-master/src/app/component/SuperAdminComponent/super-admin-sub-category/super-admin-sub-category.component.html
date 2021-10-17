@@ -1,0 +1,21 @@
+<div class="container" align="center">
+    <body class="container" style="justify-content: center;align-items: center;">
+        <div class="center" style="font-size: medium;width:50% ;">
+            <table *ngIf="users" class="table table-bordered table-hover">
+                <thead>
+                    <tr style="font-weight: bold;">
+                        <td>SubCategory_Id</td>
+                        <td>SubCategory_Name</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.subCatId}}</td>
+                        <td>{{user.subCatName}}</td>
+                        <td><button type="button" (click)="deleteSubCategory(user.subCatId)"
+                                class="btn btn-outline-primary">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>

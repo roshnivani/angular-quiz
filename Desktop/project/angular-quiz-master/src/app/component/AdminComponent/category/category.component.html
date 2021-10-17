@@ -1,0 +1,45 @@
+<div class="container" align="center">
+
+    <body class="container" style="justify-content: center;align-items: center;">
+
+        <div class="center" style="font-size: medium;width:50% ;">
+            <form>
+                <fieldset class="form-group border p-3">
+                <h2 style="text-align: center;">Category</h2><br>
+                <div class="form-group row" >
+                    <label for="form-check-input" class="col-sm-3 col-form-label">Category Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="quizCatName" class="form-control" [(ngModel)]="cat.quizCatName" /><br />
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                <button type="button" (click)="saveCategory()"  class="btn btn-primary btn-lg">submit</button>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+    </body>
+
+    <div class="container">
+        <body class="container" style="justify-content: center;align-items: center;">
+            <div class="center" style="font-size: medium;width:50% ;">
+        <table *ngIf="users" class="table table-bordered table-hover">
+            <thead>
+                <tr style="font-weight: bold;">
+                    <td>Category_Id</td>
+                    <td>Category_Name</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.quizCatId}}</td>
+                    <td>{{user.quizCatName}}</td>
+                    <td><button type="button" (click)="deleteUser(user.quizCatId)" class="btn btn-outline-primary">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        </body>
+    </div>
+    </div>
